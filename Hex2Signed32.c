@@ -1,5 +1,5 @@
 /**
- * @file        hex2signed.c
+ * @file        Hex2Signed32.c
  * @author      LuSkywalker (info@lusw.dev)
  * @brief       Turn input hex string into dec signed integer.
  * @version     1.1
@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-#include "hex2signed.h"
+#include "Hex2Signed32.h"
 
 /**
  * @brief   Main function.
