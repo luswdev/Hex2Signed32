@@ -1,7 +1,6 @@
 # Hex2Signed32
 Turn input hex string into dec signed integer base on 2's complement.
 
----
 ## Flags
 - using **HACKED** to using casting method.
 
