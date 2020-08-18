@@ -36,8 +36,8 @@ int main(void)
             printf("Error: Out of Range!\n");
             goto failed;
         }
-
-        printf("Result: %d\n", hex_to_value(in));
+        
+        printf("Result for \"0x%s\": %d\n", in, hex_to_value(in));
 
     failed: 
         printf("\nInput a hex value: 0x");
