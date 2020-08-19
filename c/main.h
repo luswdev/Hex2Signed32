@@ -9,9 +9,18 @@
  * 
  */
 
-#ifndef __MAIN_H__
-#define __MAIN_H__
+#ifndef __C_MAIN_H__
+#define __C_MAIN_H__
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 #include "hex2signed.h"
 
-#endif /* __MAIN_H__ */
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __C_MAIN_H__ */
