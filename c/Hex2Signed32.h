@@ -9,8 +9,13 @@
  * 
  */
 
-#ifndef __HEX2SIGN_H__
-#define __HEX2SIGN_H__
+#ifndef __C_HEX2SIGN_H__
+#define __C_HEX2SIGN_H__
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 #ifdef __MINGW32__
 #include <windows.h>
@@ -39,5 +44,9 @@ void print_description(char file[], char from[]);
 int check_input_valid(char in[]);
 int hex_to_value(char in[]);
 int hex_to_int(char c);
+  
+#ifdef __cplusplus
+}
+#endif
 
-#endif /* __HEX2SIGN_H__ */
+#endif /* __C_HEX2SIGN_H__ */
