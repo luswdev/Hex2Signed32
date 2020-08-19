@@ -1,5 +1,5 @@
 /**
- * @file        main.h
+ * @file        c/main.h
  * @author      LuSkywalker (info@lusw.dev)
  * @brief       Header file of main.c
  * @version     1.0
