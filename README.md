@@ -4,19 +4,19 @@ Turn input hex string into dec signed integer base on 2's complement.
 ## Types
 - Default using C:
 
-```makefile
+```bash
 make run
 ```
 
 - or using target `c`
 
-```makefile
+```bash
 make c
 ```
 
 - Also provide C++:
 
-```makefile
+```bash
 make cpp
 ```
 
