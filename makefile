@@ -2,7 +2,7 @@ PREFIX=
 CC=gcc
 CP=g++
 
-PROJECT_NAME=Hex2Signed32
+PROJECT_NAME=hex2signed
 DEFAULT=c
 
 ifeq ($(OS),Windows_NT)
@@ -12,6 +12,9 @@ else
     OBJ=main.o
 	EXECPREFIX=./
 endif
+
+# add -D HACKED for using casting method
+CFLAG=
 
 all: 
 	@echo -e "all\tPrint this help information."
