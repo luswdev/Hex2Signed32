@@ -1,5 +1,5 @@
 /**
- * @file        hex2signed.c
+ * @file        c/Hex2Signed32.c
  * @author      LuSkywalker (info@lusw.dev)
  * @brief       Turn input hex string into dec signed integer.
  * @version     1.1.1
