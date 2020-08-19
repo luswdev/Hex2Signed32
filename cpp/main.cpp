@@ -1,5 +1,5 @@
 /**
- * @file        main.cpp
+ * @file        cpp/main.cpp
  * @author      LuSkywalker (info@lusw.dev)
  * @brief       Testing file of hex2signed.c
  * @version     1.0
