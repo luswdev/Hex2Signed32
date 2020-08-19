@@ -27,3 +27,10 @@ make cpp
 ```makefile
 CFLAG=-D HACKED
 ```
+
+### Windows
+If you are using windows, you should install [MinGW](http://www.mingw.org/) first.
+Needed:
+  - gcc
+  - g++
+  - make
