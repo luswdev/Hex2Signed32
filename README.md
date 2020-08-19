@@ -1,15 +1,29 @@
 # Hex2Signed32
 Turn input hex string into dec signed integer base on 2's complement.
 
-## Flags
-- using **HACKED** to using casting method.
+## Types
+- Default using C:
 
-```bash
-gcc Hex2Signed32.c -D HACKED -o Hex2Signed32.o
+```makefile
+make run
 ```
 
-- not using flag to using default 2's complement method.
+- or using target `c`
 
-```bash
-gcc Hex2Signed32.c -o Hex2Signed32.o
+```makefile
+make c
+```
+
+- Also provide C++:
+
+```makefile
+make cpp
+```
+
+### Flags
+- using **HACKED** to using casting method.
+- add `-D HACKED` on line 17 in *makefile*
+
+```makefile
+CFLAG=-D HACKED
 ```
