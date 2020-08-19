@@ -25,8 +25,8 @@ int main(int argc, char* argv[])
     print_description(argv[0], __FILE__);
 
     Hex2Signed sol;
-
-    printf("\nInput a hex value: \t\t0x");
+    
+    cout << endl << "Input a hex value: \t\t0x";
     while (sol.get_input()) {
 
         if (sol.check_input_valid() >= 0) {
