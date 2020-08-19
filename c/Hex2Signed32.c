@@ -3,7 +3,7 @@
  * @author      LuSkywalker (info@lusw.dev)
  * @brief       Turn input hex string into dec signed integer.
  * @version     1.1.1
- * @date        2020-08-19
+ * @date        2020-08-18
  * 
  * @copyright   Copyright (c) 2020 LuSkywalker
  * 
@@ -114,7 +114,7 @@ int hex_to_int(char c)
  */
 void print_description(char file[], char from[])
 {
-    system("cls");
+    clear_screen()
     printf("%s (v%s) compiled with %s from %s\n", file, VERSION, __FILE__, from);
     printf("Transform hex value into signed integer.\n");
     printf("Accept character set: [A-F, a-f, 0-9]\n");
