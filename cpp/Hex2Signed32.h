@@ -1,5 +1,5 @@
 /**
- * @file        hex2signed.h
+ * @file        cpp/Hex2Signed32.h
  * @author      LuSkywalker (info@lusw.dev)
  * @brief       hex2signed.c define header file.
  * @version     1.0
@@ -9,8 +9,8 @@
  * 
  */
 
-#ifndef __HEX2SIGN_H__
-#define __HEX2SIGN_H__
+#ifndef __CPP_HEX2SIGN_H__
+#define __CPP_HEX2SIGN_H__
 
 #ifdef __MINGW32__
 #include <windows.h>
@@ -59,4 +59,4 @@ public:
     int hex_to_value(void);
 };
 
-#endif /* __HEX2SIGN_H__ */
+#endif /* __CPP_HEX2SIGN_H__ */
