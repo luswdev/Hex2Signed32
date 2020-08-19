@@ -29,11 +29,11 @@ run: $(OBJ)
 $(OBJ): $(DEFAULT)
 
 c:
-	$(CC) $@/main.$@ $@/$(PROJECT_NAME).$@ -o $(OBJ)
+	$(CC) $@/main.$@ $@/$(PROJECT_NAME).$@ $(CFLAG) -o $(OBJ)
 	$(EXECPREFIX)$(OBJ)
 
 cpp:
-	$(CP) $@/main.$@ $@/$(PROJECT_NAME).$@ -o $(OBJ)
+	$(CP) $@/main.$@ $@/$(PROJECT_NAME).$@ $(CFLAG) -o $(OBJ)
 	$(EXECPREFIX)$(OBJ)
 
 clean:
