@@ -28,13 +28,12 @@ run: $(OBJ)
 
 $(OBJ): $(DEFAULT)
 
-
 c:
-	$(CC) c/main.c c/$(PROJECT_NAME).c -o $(OBJ)
+	$(CC) $@/main.$@ $@/$(PROJECT_NAME).$@ -o $(OBJ)
 	$(EXECPREFIX)$(OBJ)
 
 cpp:
-	$(CP) cpp/main.cpp cpp/$(PROJECT_NAME).cpp -o $(OBJ)
+	$(CP) $@/main.$@ $@/$(PROJECT_NAME).$@ -o $(OBJ)
 	$(EXECPREFIX)$(OBJ)
 
 clean:
