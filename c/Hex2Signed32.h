@@ -12,10 +12,21 @@
 #ifndef __HEX2SIGN_H__
 #define __HEX2SIGN_H__
 
+#ifdef __MINGW32__
 #include <windows.h>
+#endif
+
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+
+#ifdef __MINGW32__
+#define clear_screen()      system("cls");
+#elif __GNUC__
+#define clear_screen()      printf("\e[1;1H\e[2J");    
+#else
+#define clear_screen()      {}
+#endif
 
 #define VERSION         "1.1.4"
 
