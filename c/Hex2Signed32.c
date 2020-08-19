@@ -1,67 +1,33 @@
 /**
- * @file        Hex2Signed32.c
+ * @file        hex2signed.c
  * @author      LuSkywalker (info@lusw.dev)
  * @brief       Turn input hex string into dec signed integer.
- * @version     1.1
- * @date        2020-08-18
+ * @version     1.1.1
+ * @date        2020-08-19
  * 
  * @copyright   Copyright (c) 2020 LuSkywalker
  * 
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdbool.h>
-#include "Hex2Signed32.h"
-
-/**
- * @brief   Main function.
- * 
- * @return  int  always return 0;
- */
-int main(void)
-{
-    char in[100] = "";
-
-    printf("Input a hex value: 0x");
-    while (fscanf( stdin,"%s", in)) {
-
-        if (!check_input_valid(in)) {
-            printf("Error: Input format invaild!\n");
-            goto failed;
-        }
-
-        if (strlen(in) > 8) {
-            printf("Error: Out of Range!\n");
-            goto failed;
-        }
-        
-        printf("Result for \"0x%s\": %d\n", in, hex_to_value(in));
-
-    failed: 
-        printf("\nInput a hex value: 0x");
-    }
-
-    return 0;
-}
+#include "hex2signed.h"
 
 /**
  * @brief   Check input string is hex value or not.
  * 
  * @param   in      input string to check
- * @return  true    is a hex value
- * @return  false   is NOT a hex value
+ * @return  -1      is a hex value
+ * @return  index   where the error occurs
  */
-bool check_input_valid(char in[])
+int check_input_valid(char in[])
 {
     for (int i=0; in[i]; ++i) {
         if (hex_to_int(in[i]) == -1) {
-            return false;
+            return i;
+   
         }
     }
 
-    return true;
+    return -1;
 }
 
 #ifdef HAKCED
@@ -139,4 +105,23 @@ int hex_to_int(char c)
     }
 
     return -1;      /* return -1 for wrong input */
+}
+
+/**
+ * @brief   print description words.
+ * 
+ * @param   file    file name which is currently executing.
+ */
+void print_description(char file[], char from[])
+{
+    system("cls");
+    printf("%s (v%s) compiled with %s from %s\n", file, VERSION, __FILE__, from);
+    printf("Transform hex value into signed integer.\n");
+    printf("Accept character set: [A-F, a-f, 0-9]\n");
+
+#ifdef HACKED
+    printf("Flag: HACKED\n");
+#endif
+
+    printf("Press CTRL+C to exit.\n");
 }
